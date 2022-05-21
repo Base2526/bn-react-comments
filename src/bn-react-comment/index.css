@@ -1,4 +1,11 @@
 /* add css module styles here (optional) */
+.commentSection {
+  margin: 5px;
+}
+
+.header {
+  margin-left: 5px;
+}
 .section {
   display: flex;
   flex-direction: column;
@@ -10,7 +17,7 @@
 .section .inputActions {
   display: flex;
   justify-content: flex-end;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 15px;
 }
 .section .inputActions .postBtn {
@@ -19,10 +26,10 @@
   background-size: 200% auto;
   border-radius: 5px;
   transition: 0.5s;
-  padding: 8px 16px;
+  /* padding: 8px 16px; */
   background-color: #84dcff;
   border: none;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   font-weight: bolder;
   font-size: 16px;
 }
@@ -39,10 +46,11 @@
   background-size: 200% auto;
   border-radius: 5px;
   transition: 0.5s;
-  padding: 8px 10px;
+  /* padding: 8px 10px; */
   border: 2px solid #8b8b8b;
   font-weight: bolder;
   font-size: 16px;
+  margin-left: 10px;
 }
 .section .inputActions .cancelBtn:hover {
   background-position: right center;
@@ -55,7 +63,7 @@
   display: flex;
   background-color: #f3f3f3;
   padding: 8px;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
   border-radius: 8px;
 }
 .form .userImg {
@@ -80,8 +88,8 @@
   margin-top: -2px;
 }
 .displayComments {
-  margin-top: 18px;
-  margin-left: 38px;
+  margin-top: 8px;
+  margin-left: 15px;
 }
 .displayComments .halfDiv {
   display: flex;
@@ -90,7 +98,7 @@
 .displayComments .halfDiv .userInfo {
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
+  /* margin-top: 16px; */
 }
 .displayComments .halfDiv .userInfo .commentsTwo {
   display: flex;

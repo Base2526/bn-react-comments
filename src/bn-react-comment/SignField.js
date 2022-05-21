@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-// import styles from './Style.scss'
 import { ActionContext } from './ActionContext'
 
 const SignField = () => {

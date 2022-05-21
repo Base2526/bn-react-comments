@@ -1,5 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
-// import styles from './Style.scss'
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 import { ActionContext } from './ActionContext'
 
 const InputField = ({ cancellor, parentId, child, value, edit, main }) => {
@@ -23,50 +25,46 @@ const InputField = ({ cancellor, parentId, child, value, edit, main }) => {
           : { marginLeft: 8 }
       }
     >
+      {/* 
       <div className={"userImg"}>
         <img
           src={actions.userImg}
           style={{ width: 38, height: 38, borderRadius: 38 / 2 }}
           alt='userIcon'
         />
-      </div>
-      <input
-        className={"postComment"}
-        type='text'
-        placeholder='Type your reply here.'
-        component='input'
+      </div> 
+      */}
+      <TextField
+        id="outlined-textarea"
+        label="Type your reply here."
         value={text}
         onChange={handleChange}
+        multiline
       />
       <div className={"inputActions"}>
-        <button
+        <Button 
           className={"postBtn"}
-          onClick={() =>
-            edit === true
-              ? actions.submit(cancellor, text, parentId, true, setText)
-              : actions.submit(cancellor, text, parentId, false, setText)
-          }
-          type='button'
-          disabled={!text}
+          variant="contained" 
+          disabled={!text} 
           style={
             !text
               ? { backgroundColor: '#84dcff' }
               : { backgroundColor: '#30c3fd' }
           }
-        >
-          Post
-        </button>
+          onClick={() =>{
+            edit === true
+            ? actions.submit(cancellor, text, parentId, true, setText)
+            : actions.submit(cancellor, text, parentId, false, setText)
+          }}>Post</Button>
         {(text || parentId) && (
-          <button
+          <Button 
             className={"cancelBtn"}
+            variant="outlined"
             onClick={() =>
-              edit
-                ? actions.handleCancel(cancellor, edit)
-                : actions.handleCancel(cancellor)
-            }
-          >
-            Cancel
-          </button>
+                edit
+                  ? actions.handleCancel(cancellor, edit)
+                  : actions.handleCancel(cancellor)
+              }>Cancel</Button>
         )}
       </div>
     </form>

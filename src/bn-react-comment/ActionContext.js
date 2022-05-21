@@ -26,6 +26,7 @@ export const ActionProvider = ({
   const handleAction = (id, edit) => {
     edit ? setEdit([...editArr, id]) : setReplies([...replies, id])
   }
+  
   const handleCancel = (id, edit) => {
     if (edit) {
       const list = [...editArr]

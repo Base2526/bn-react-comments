@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
-// import styles from './Style.scss'
 import InputField from './InputField'
 import { ActionContext } from './ActionContext'
-import 'reactjs-popup/dist/index.css'
 import CommentStructure from './CommentStructure'
 
 const DisplayComments = ({ comments }) => {

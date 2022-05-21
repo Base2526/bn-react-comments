@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import styles from '../App.css'
 import DisplayComments from './DisplayComments'
 import { ActionProvider } from './ActionContext'
 import SignField from './SignField'
@@ -14,12 +13,7 @@ export const CommentSection = ({
   customInput
 }) => {
   const [comments, setComments] = useState(commentsArray)
-
-  useEffect(() => {
-    console.log("+++ useEffect +++", commentsArray)
-  }, [])
-
-
+  
   useEffect(() => {
     setComments(commentsArray)
   }, [commentsArray])

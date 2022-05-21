@@ -4,7 +4,7 @@ import logo from './logo.svg';
 
 import data from "./data.json"
 
-import {CommentSection} from './comments'
+import {CommentSection} from './bn-react-comment'
 import CustomInputt from "./CustomInputt"
 
 const App =()=> {
